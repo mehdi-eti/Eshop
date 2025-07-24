@@ -1,0 +1,19 @@
+python:
+    - D:\ProgramingLanguage\Python\virtualenv\env\Scripts\activate
+user 1:
+  - superuser
+  - mehdi
+  - etezadi
+  - 09124569873
+  - etezadi_mehdi@yahoo.com
+  - superUser123987456
+  - Token
+
+user 2:
+  - consumer
+  - ali
+  - farmahini
+  - 09124569874
+  - ali_farmahini@gmail.com
+  - consumerUser123456987
+  - Token

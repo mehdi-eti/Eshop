@@ -1,0 +1,60 @@
+{% extends 'share/_core.html' %} {% block register %}
+<div class="container">
+  <section id="form">
+    <!--form-->
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="signup-form">
+          <!--sign up form-->
+          <h2>ثبت نام کاربـر جدیـد</h2>
+          <form method="post">
+            {% csrf_token %}
+            <!-- Phone -->
+            <label for="{{ consumerRegister.phone.id_for_label }}"
+              >{{ consumerRegister.phone.label }}:</label
+            >
+            {{consumerRegister.phone}}
+            {% for error in consumerRegister.phone.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
+
+            <!-- Email -->
+            <label for="{{ consumerRegister.email.id_for_label }}"
+              >{{ consumerRegister.email.label }}:</label
+            >
+            {{consumerRegister.email}}
+            {% for error in consumerRegister.email.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
+
+            <!-- Password -->
+            <label for="{{ consumerRegister.password.id_for_label }}"
+              >{{ consumerRegister.password.label }}:</label
+            >
+            {{consumerRegister.password}}
+
+            <!-- Re_password -->
+            <label for="{{ consumerRegister.re_password.id_for_label }}"
+              >{{ consumerRegister.re_password.label }}:</label
+            >
+            {{consumerRegister.re_password}}
+
+            <!-- Errors -->
+            {% for error in consumerRegister.password.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
+
+            {% for error in consumerRegister.re_password.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
+
+            <button type="submit" class="btn btn-default">ثبت نام</button>
+          </form>
+        </div>
+        <!--/sign up form-->
+      </div>
+    </div>
+  </section>
+</div>
+<!--/form-->
+{% endblock register %}

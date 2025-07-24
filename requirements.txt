@@ -1,0 +1,11 @@
+django[argon2]
+autopep8
+bcrypt
+Django
+django-render-partial
+djangorestframework
+oauth2client
+Pillow
+django-render-partial
+django-widget-tweaks
+django-mathfilters
